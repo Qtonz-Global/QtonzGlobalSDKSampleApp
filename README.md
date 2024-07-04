@@ -232,6 +232,86 @@ QtonzAd.getInstance().loadNativeAd(this, BuildConfig.ad_native, R.layout.native_
                 frAds.removeAllViews();
             }
         });
+        
+        
+// Load priority native and default native ad by sametime:
+        QtonzAd.getInstance().loadNativePrioritySameTime(
+            this,
+            ID_NATIVE_PRIORITY,
+            ID_NATIVE_NORMAL,
+            R.layout.custom_native_admod_medium_rate,
+            object : AdCallback() {
+              override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
+                  super.onNativeAdLoaded(nativeAd)
+                  //save or show native 
+              }
+              
+              override fun onAdFailedToLoad(adError: ApAdError?) {
+                  super.onAdFailedToLoad(adError)   
+                  // gone layout ad native 
+              }
+            }
+        )
+	    
+// Load priority native and default native ad by alternate:
+        QtonzAd.getInstance().loadNativePriorityAlternate(
+            this,
+            ID_NATIVE_PRIORITY,
+            ID_NATIVE_NORMAL,
+            R.layout.custom_native_admod_medium_rate,
+            object : AdCallback() {
+               override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
+                  super.onNativeAdLoaded(nativeAd)
+                  //save or show native 
+               }
+              
+               override fun onAdFailedToLoad(adError: ApAdError?) {
+                  super.onAdFailedToLoad(adError)   
+                  // gone layout ad native 
+               }
+            }
+        )
+        
+// Load priority native, medium native and default native ad by sametime:
+        QtonzAd.getInstance().loadNative3SameTime(
+            this,
+            ID_NATIVE_PRIORITY,
+            ID_NATIVE_MEDIUM,
+            ID_NATIVE_NORMAL,
+            R.layout.custom_native_ad,
+            object : AdCallback() {
+               override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
+                  super.onNativeAdLoaded(nativeAd)
+                  //save or show native 
+               }
+              
+               override fun onAdFailedToLoad(adError: ApAdError?) {
+                  super.onAdFailedToLoad(adError)   
+                  // gone layout ad native 
+              }
+            }
+        )
+        
+// Load priority native, medium native and default native ad by alternate:
+        QtonzAd.getInstance().loadNative3Alternate(
+            this,
+            ID_NATIVE_PRIORITY,
+            ID_NATIVE_MEDIUM,
+            ID_NATIVE_NORMAL,
+            R.layout.custom_native_ad,
+            object : AdCallback() {
+               override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
+                  super.onNativeAdLoaded(nativeAd)
+                  //save or show native 
+               }
+              
+               override fun onAdFailedToLoad(adError: ApAdError?) {
+                  super.onAdFailedToLoad(adError)   
+                  // gone layout ad native 
+               }
+            }
+        )                
+        
 ~~~   
 
 # Native: Load
