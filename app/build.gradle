@@ -82,7 +82,7 @@ dependencies {
 
 
 //    implementation 'com.github.hardik575:qtonzsdk:1.0.3'
-    implementation 'com.github.rajeshqtonz:adsdk:1.0.0'
+    implementation 'com.qtonz.sdk:qtonzsdk:1.0.0'
 
 }
 repositories {
