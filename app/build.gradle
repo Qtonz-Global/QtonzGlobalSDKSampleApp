@@ -87,4 +87,11 @@ dependencies {
 }
 repositories {
     mavenCentral()
+    maven {
+        url 'https://jfrog.qtonzglobal.com/artifactory/qtonz-ads'
+        credentials {
+            username = project.findProperty("artifactory_user") ?: "admin"
+            password = project.findProperty("artifactory_password") ?: "password"
+        }
+    }
 }
