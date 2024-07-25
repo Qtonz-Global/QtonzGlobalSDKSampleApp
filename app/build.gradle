@@ -7,7 +7,7 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId "com.qtonz.module"
-        minSdkVersion 24
+        minSdkVersion 33
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -82,7 +82,7 @@ dependencies {
 
 
 //    implementation 'com.github.hardik575:qtonzsdk:1.0.3'
-    implementation 'com.qtonz.sdk:qtonzsdk:1.0.0'
+    implementation 'com.qtonz.sdk:qtonzsdk:1.0.12'
 
 }
 repositories {
