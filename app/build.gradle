@@ -72,6 +72,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.core:core-ktx:1.8.0"
@@ -91,13 +92,9 @@ repositories {
     mavenCentral()
     maven {
         url 'https://jfrog.qtonzglobal.com/artifactory/qtonz-ads'
-//        credentials {
-//            username = project.findProperty("artifactory_user") ?: "admin"
-//            password = project.findProperty("artifactory_password") ?: "password"
-//        }
         credentials {
-            username = "zoobi"
-            password = "n52XWP02Xam0"
+            username = project.findProperty("artifactory_user") ?: "admin"
+            password = project.findProperty("artifactory_password") ?: "password"
         }
     }
 }
